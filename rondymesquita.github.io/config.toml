@@ -1,0 +1,42 @@
+baseURL = "http://localhost:5000/"
+languageCode = "en-us"
+title = "Rondy Mesquita"
+theme = "clean"
+paginate = 1
+Copyright = "All rights reserved - 2017"
+canonifyurls = true
+
+[author]
+  name = "Rondy Mesquita"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+  [params]
+    DateForm = "Mon, Jan 2, 2006"
+    Description = "Another site built with static generators"
+    Author = "Rondy Mesquita"
+    email = "rondinellimesquitas@gmail.com" #Remove this line if you would prefer not to use an email button in the footer.
+    postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
+    showReadTime = true #set to false to exclude read time from header of post
+
+  [[params.social]]
+    title = "linkedin"
+    url = "https://www.linkedin.com/in/rondinelli-mesquita-60b18a31/"
+  [[params.social]]
+    title = "github"
+    url = "https://github.com/rondymesquita"
+
+  [[menu.main]]
+    name = "home"
+    url = "/"
+    weight = -200
+  [[menu.main]]
+    name = "Archives"
+    url = "/post/"
+    weight = -180
+  [[menu.main]]
+    name = "Me"
+    url = "/me/"
+    weight = -180

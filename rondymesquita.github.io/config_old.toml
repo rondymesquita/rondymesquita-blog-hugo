@@ -1,0 +1,38 @@
+baseURL = "http://localhost:5000/"
+languageCode = "en-us"
+title = "Rondy Mesquita"
+theme = "clean"
+paginate = 1
+Copyright = "All rights reserved - 2015"
+canonifyurls = true
+
+[taxonomies]
+  tags = "tags"
+
+[Params]
+  # Author = "Rondy Mesquita"
+  description = "Welcome to my website"
+  metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
+  cover = "images/cover.jpg"
+  author = "Rondy Mesquita"
+  authorlocation = "Paris, France"
+  authorwebsite = "http://vjeantet.fr"
+  authorbio= "my bio"
+  logo = "images/logo.png"
+  googleAnalyticsUserID = "UA-79101-12"
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  RSSLink = "http://feeds.feedburner.com/..."
+  githubName = "vjeantet"
+  twitterName = "vjeantet"
+  # facebookName = ""
+  # linkedinName = ""
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
+
+  # Setting a value will load highlight.js and enable syntax highlighting using the style selected.
+  # See https://github.com/isagalaev/highlight.js/tree/master/src/styles for available styles
+  # A preview of above styles can be viewed at https://highlightjs.org/static/demo/
+  hjsStyle = "default"
+
+  [params.social]
+    twitter = "your_twitter"
