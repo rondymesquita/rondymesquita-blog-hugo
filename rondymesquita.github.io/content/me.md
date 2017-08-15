@@ -1,7 +1,6 @@
 ---
 title: "Me"
-date: 2017-08-09T21:58:37-03:00
-draft: true
+date: 2017-08-15T08:55:35-03:00
 type: about
 ---
 

@@ -1,0 +1,23 @@
+# github.com/go-task/task
+
+default:
+  dir: rondymesquita.github.io
+  cmds:
+    - hugo
+
+serve:
+  dir: rondymesquita.github.io
+  cmds:
+    - hugo serve -D
+
+build:
+  dir: rondymesquita.github.io
+  cmds:
+    - hugo -b http://rondymesquita.github.io
+    - cp -R public/ ../
+
+buildLocal:
+  dir: rondymesquita.github.io
+  cmds:
+    - hugo -D -b http://localhost:1313
+    - task: serve
