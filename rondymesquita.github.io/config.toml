@@ -15,10 +15,10 @@ canonifyurls = true
 
   [params]
     DateForm = "Mon, Jan 2, 2006"
-    Description = "Another site built with static generators"
+    Description = "Luke, I am your father!"
     Author = "Rondy Mesquita"
     email = "rondinellimesquitas@gmail.com" #Remove this line if you would prefer not to use an email button in the footer.
-    postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
+    postSummariesFrontPage = 5 #Number of post summaries to show on front page, comment out to allow default(4)
     showReadTime = true #set to false to exclude read time from header of post
 
   [[params.social]]

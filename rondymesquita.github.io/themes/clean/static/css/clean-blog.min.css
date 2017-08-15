@@ -264,6 +264,10 @@
      margin-top: 0
  }
 
+ .post-preview>.post-meta>.post-title {
+     font-weight: bold;
+ }
+
  .post-preview>.post-meta>a {
      text-decoration: none;
      color: #404040
@@ -422,6 +426,21 @@
      color: gray;
      background-color: #404040;
      cursor: not-allowed
+ }
+
+ .pagination li>a {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 0 !important;
+    color: #0085a1;
+ }
+
+ .pagination li>a:hover,
+ .pagination li>a:focus,
+ .pagination li.active a {
+     color: #fff;
+     background-color: #0085a1;
+     border: 1px solid #0085a1
  }
 
  ::-moz-selection {

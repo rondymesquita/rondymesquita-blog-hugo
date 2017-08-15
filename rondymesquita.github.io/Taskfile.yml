@@ -1,0 +1,9 @@
+# github.com/go-task/task
+
+default:
+  cmds:
+    - echo "Hello, World!"
+
+serve:
+  cmds:
+    - hugo serve -D
