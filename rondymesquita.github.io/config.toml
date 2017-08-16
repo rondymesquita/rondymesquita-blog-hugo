@@ -2,7 +2,7 @@ baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "Rondy Mesquita"
 theme = "clean"
-paginate = 1
+paginate = 10
 Copyright = "All rights reserved - 2017"
 canonifyurls = true
 

@@ -3,7 +3,7 @@
 default:
   dir: rondymesquita.github.io
   cmds:
-    - hugo
+    - task: build
 
 serve:
   dir: rondymesquita.github.io
@@ -14,10 +14,23 @@ build:
   dir: rondymesquita.github.io
   cmds:
     - hugo -b http://rondymesquita.github.io
-    - cp -R public/ ../
 
-buildLocal:
+serve-static:
   dir: rondymesquita.github.io
   cmds:
     - hugo -D -b http://localhost:1313
     - task: serve
+
+configure:
+  dir: rondymesquita.github.io/public
+  cmds:
+    - git remote add origin git@github.com:rondymesquita/rondymesquita.github.io.git
+
+deploy:
+  dir: rondymesquita.github.io/public
+  cmds:
+    - task: build
+    - git add -A
+    - git commit -m "$(date)"
+    - git push origin master
+    - echo "Access http://rondymesquita.github.io"
