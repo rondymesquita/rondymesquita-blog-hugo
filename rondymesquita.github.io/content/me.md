@@ -12,3 +12,6 @@ type: about
 > Experience with web and mobile development, with knowledge in webdesign. Experience with web and mobile test automation and continuous integration. Currently works as software developer and test analyst at Instituto Atlântico, Fortaleza, on research projects.
 Graduated in Information Systems where discovered JQuery, Java and Android.
 Recently started study with Python and Go programming languages.
+
+> - [Linkedin](https://www.linkedin.com/in/rondinelli-mesquita-60b18a31/)
+> - [Github](https://github.com/rondymesquita)

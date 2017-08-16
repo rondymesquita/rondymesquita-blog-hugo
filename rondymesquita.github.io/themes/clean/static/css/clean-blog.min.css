@@ -189,7 +189,8 @@ h6,
      .intro-header .site-heading,
      .intro-header .post-heading,
      .intro-header .page-heading {
-         padding: 150px 0
+         /*padding: 150px 0;*/
+         padding: 100px 0 50px;
      }
  }
 
@@ -206,6 +207,7 @@ h6,
 
  .intro-header .site-heading .subheading,
  .intro-header .page-heading .subheading {
+    height: 26.4px;
      font-size: 24px;
      line-height: 1.1;
      display: block;
@@ -217,7 +219,8 @@ h6,
  @media only screen and (min-width:768px) {
      .intro-header .site-heading h1,
      .intro-header .page-heading h1 {
-         font-size: 80px
+         /*font-size: 80px*/
+         font-size: 60px
      }
  }
 
