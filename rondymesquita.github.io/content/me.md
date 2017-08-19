@@ -4,7 +4,7 @@ date: 2017-08-15T08:55:35-03:00
 type: about
 ---
 
-[<img src="/images/rondy-mesquita-avatar.jpeg" width="150" style="float: left; margin:10px 10px 15px 0;">](rondy-mesquita-avatar.jpeg)
+[<img src="/images/rondy-mesquita-avatar.jpeg" width="150" style="float: left; margin:10px 10px 15px 0;">](/images/rondy-mesquita-avatar.jpeg)
 
 # Developer / Tester at Instituto Atlântico
 ### Coffee / Metal Addicted
