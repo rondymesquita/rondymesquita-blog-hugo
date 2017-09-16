@@ -4,9 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-body,
 .intro-header .post-heading .meta{
-  font-family: Lora;
+  font-family: 'Open Sans';
 }
 
 h1,
@@ -22,7 +21,8 @@ h6,
 .btn,
 .pager li>a,
 .pager li>span,
-.pagination li>a {
+.pagination li>a,
+body p {
   font-family: 'Open Sans';
 }
 
@@ -35,7 +35,7 @@ h6,
 
  p {
      line-height: 1.5;
-     margin: 30px 0
+     margin: 30px 0;
  }
 
  p a {
@@ -244,7 +244,7 @@ h6,
  .intro-header .post-heading .meta {
      /*font-family: Lora, 'Times New Roman', serif;*/
      font-style: italic;
-     font-weight: 300;
+     font-weight: 400;
      font-size: 20px
  }
 
@@ -284,7 +284,7 @@ h6,
  }
 
  .post-preview>.post-meta {
-     color: gray;
+     /*color: gray;*/
      font-size: 18px;
      font-style: italic;
      margin-top: 0
@@ -296,7 +296,8 @@ h6,
 
  .post-preview>.post-meta>a {
      text-decoration: none;
-     color: #404040
+     color: #404040;
+     font-weight: 600;
  }
 
  .post-preview>.post-meta>a:hover,

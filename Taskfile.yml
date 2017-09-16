@@ -8,7 +8,7 @@ default:
 serve:
   dir: rondymesquita.github.io
   cmds:
-    - hugo serve -D
+    - hugo serve
 
 build:
   dir: rondymesquita.github.io
