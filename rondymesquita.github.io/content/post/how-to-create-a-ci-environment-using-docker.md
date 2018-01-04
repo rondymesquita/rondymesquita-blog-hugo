@@ -7,7 +7,7 @@ categories: ["how-to","devops"]
 
 ### This content was presented on Agile Testers Conference 2017 - Fortaleza Edition
 
-## TLTR
+## TLTR 
 > Create a continuous integration environment running over Docker containers
 
 All code is available here: https://github.com/rondymesquita/drone-playground

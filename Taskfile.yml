@@ -23,6 +23,8 @@ serve-draft:
 configure:
   dir: rondymesquita.github.io/public
   cmds:
+    - rm -rf .git
+    - git init
     - git remote add origin git@github.com:rondymesquita/rondymesquita.github.io.git
 
 deploy:
@@ -31,5 +33,5 @@ deploy:
     - task: build
     - git add -A
     - git commit -m "$(date)"
-    - git push origin master
+    - git push -f origin master
     - echo "Access http://rondymesquita.github.io"
