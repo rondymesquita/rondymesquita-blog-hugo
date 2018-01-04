@@ -5,15 +5,15 @@ default:
   cmds:
     - task: build
 
-serve:
-  dir: rondymesquita.github.io
-  cmds:
-    - hugo serve
-
 build:
   dir: rondymesquita.github.io
   cmds:
     - hugo -b http://rondymesquita.github.io
+
+serve:
+  dir: rondymesquita.github.io
+  cmds:
+    - hugo serve
 
 serve-draft:
   dir: rondymesquita.github.io
