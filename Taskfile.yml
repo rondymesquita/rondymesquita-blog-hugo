@@ -15,11 +15,10 @@ build:
   cmds:
     - hugo -b http://rondymesquita.github.io
 
-serve-static:
+serve-draft:
   dir: rondymesquita.github.io
   cmds:
-    - hugo -D -b http://localhost:1313
-    - task: serve
+    - hugo -D serve
 
 configure:
   dir: rondymesquita.github.io/public
