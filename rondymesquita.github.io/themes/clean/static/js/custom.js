@@ -9,7 +9,7 @@ $(document).ready(function(){
   	"Mais de 8000?",
   	"Fu-são! Ráááááá",
   	"Arrrrrrrggggggghhhh - Chewbacca",
-  	"Luke, I am your father!",
+  	"No, I am your father!",
   	"Ka-me-ha-me-haaaaaaaaa",
   	"Em todos esses anos nessa industria vital...",
   	"Why so serious? >D",
@@ -17,7 +17,7 @@ $(document).ready(function(){
   	"I am Batman"
   ]
 
-  //change site desccription
+  //change site description
   var random = Math.floor(Math.random() * descriptions.length);
   $("#site-description").text(descriptions[random])
 
