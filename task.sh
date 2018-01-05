@@ -65,17 +65,44 @@ deploy(){
   cd .. 
 }
 
+say(){
+  echo "You said $@"
+}
+
+
 # # Execute the tasks
 # for TASK in "$@"
 # do
 #  $TASK
 # done
 
+FUNCTION=""
+# ARG=""
+
+while getopts ":t:a:" opt; do
+  case $opt in
+    t)
+      # echo "-t was triggered, Parameter: $OPTARG" >&2
+      FUNCTION=${OPTARG}
+      ;;
+    a)
+      ARG+=(${OPTARG})
+      ;;
+  esac
+done
+
+echo "$FUNCTION"
+echo "${ARG[@]}"
+
+$FUNCTION ${ARG[@]}
+
 # If nothing, run default
 if [ "$1" = "" ]; then
   help
 fi
 
-FUNCTION=$1
-shift
-$FUNCTION $@
+# echo $1
+
+# FUNCTION=$1
+# shift
+# $FUNCTION $@
