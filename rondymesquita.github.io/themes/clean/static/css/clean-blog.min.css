@@ -41,8 +41,8 @@ body ol li {
  }
 
  p a,
- ul li a,
- ol li a {
+ article ul li a,
+ article  ol li a {
      text-decoration: underline
  }
 
@@ -62,7 +62,9 @@ body ol li {
 
  a:hover,
  a:focus {
-     color: #0085a1
+     /*color: #0085a1*/
+    color: #c7254e;
+    background-color: #f9f2f4;
  }
 
  a img:hover,
@@ -101,6 +103,35 @@ body ol li {
      font-size: 12px;
      font-weight: 800;
      letter-spacing: 1px
+ }
+
+blockquote{
+    font-size: 20px;
+}
+
+blockquote ol:last-child,
+blockquote p:last-child,
+blockquote ul:last-child {
+    margin-top: 0;
+}
+
+.post-preview>a:hover,
+.post-preview>a:focus,
+.post-preview>.post-meta>a:hover,
+ .post-preview>.post-meta>a:focus {
+    color: #c7254e;
+    background-color: #f9f2f4;
+}
+
+ .btn-default:hover,
+ .btn-default:focus,
+ .pager li>a:hover,
+ .pager li>a:focus{
+    background-color: #c7254e;
+ }
+ .pager li>a:hover,
+ .pager li>a:focus {
+     border: 1px solid #c7254e;
  }
 
  @media only screen and (min-width:768px) {
@@ -272,7 +303,7 @@ body ol li {
  .post-preview>a:hover,
  .post-preview>a:focus {
      text-decoration: none;
-     color: #0085a1
+     /*color: #0085a1;*/
  }
 
  .post-preview>a>.post-title {
@@ -306,8 +337,8 @@ body ol li {
 
  .post-preview>.post-meta>a:hover,
  .post-preview>.post-meta>a:focus {
-     color: #0085a1;
-     text-decoration: underline
+    text-decoration: underline
+     /*color: #0085a1;*/    
  }
 
  @media only screen and (min-width:768px) {
@@ -422,7 +453,7 @@ body ol li {
 
  .btn-default:hover,
  .btn-default:focus {
-     background-color: #0085a1;
+     /*background-color: #0085a1;*/
      border: 1px solid #0085a1;
      color: #fff
  }
@@ -446,8 +477,8 @@ body ol li {
  .pager li>a:hover,
  .pager li>a:focus {
      color: #fff;
-     background-color: #0085a1;
-     border: 1px solid #0085a1
+     /*background-color: #0085a1;*/
+     /*border: 1px solid #0085a1*/
  }
 
  .pager .disabled>a,
