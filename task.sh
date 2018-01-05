@@ -37,11 +37,15 @@ serve-draft(){
 }
 
 new(){
+  cd $DIR
   hugo new $1
+  cd ..
 }
 
 undraft(){
+  cd $DIR
   hugo undraft $1
+  cd ..
 }
 
 configure(){
