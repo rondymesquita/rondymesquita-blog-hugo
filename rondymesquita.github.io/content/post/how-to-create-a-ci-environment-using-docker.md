@@ -32,7 +32,7 @@ A lot of work, right? But, If I say that this hard working can be reduced?
 
 ## Docker and Microservices
 
-Here, we are going to use most of benefits that Docker brings us, reducing all the configuration time and focusing on what matters: Have a CI server up and ready to run build steps. Furthermore, Docker brings to possibility to reuse the configuration and makes easier to port the whole setup to a new environment. No further ado, let's get started!
+Here, we are going to use most of benefits that Docker brings us, reducing all the configuration time and focusing on what matters: Have a CI server up and ready to run build steps. Furthermore, Docker brings the possibility to reuse the configuration and makes easier to port the whole setup to a new environment. No further ado, let's get started!
 
 ## Tools
 
@@ -44,12 +44,12 @@ Not limited to, but I have tested with these following requirements versions:
 
 For this example, I had used:
 
-- Drone - [http://drone.io/]()
+- Drone - [http://drone.io/](http://drone.io/)
     + Is a continuous delivery platform built for containers. Will serve as our CI execution server
-- Gogs - [https://gogs.io]()
+- Gogs - [https://gogs.io](https://gogs.io)
     + Self-hosted git repository
 
-## Arch
+## Architecture
 
 We will have Drone and Gogs running over Docker containers. Also, we are going to use Docker Compose to make easier networking configuration and make the whole environment portable with a single file.
 
@@ -157,9 +157,9 @@ networks:
 ```
 
 #### Note
-> To speed up the **Gogs** database configuration, I copy the file [https://github.com/rondymesquita/drone-playground/blob/master/app.ini]() to **/var/gogs/gogs/conf/** folder on my machine. This folder is a shared docker volume used by **Gogs** to store its configuration data. It's optional, because you can configure Gogs manually, inserting the database url and credentials.
+> To speed up the **Gogs** database configuration, I copy the file [https://github.com/rondymesquita/drone-playground/blob/master/app.ini](https://github.com/rondymesquita/drone-playground/blob/master/app.ini) to **/var/gogs/gogs/conf/** folder on my host machine. This folder is a shared docker volume used by **Gogs** to store its configuration data. It's optional, because you can configure Gogs manually, inserting the database url and credentials.
 
-Enter on folder and do:
+Enter on cloned project folder and execute:
 ```
 $ ./tasks.sh up
 ```
@@ -197,7 +197,7 @@ Now, create a new `repository`. For this example, I am going to use the `sample-
 Set the name to `sample-app-python` and click `Create Repository`.
 
 Similiar to Github, Gogs will show you the commands to push you code to the remote repository.
-Just wait paciently. We are going to push soon.
+Just wait patiently. We are going to push soon.
 
 ### Drone
 The Drone configuration is simpler. Due the integration between Drone and Gogs, it is possible to do the configuration with some clicks. As you can see on `docker-compose.yml` file at `drone-server` service, there are some environment variables pointing to Gogs. So, open on your browser the drone address given by `inspect` command.
@@ -206,11 +206,15 @@ You should be able to login with same user created on Gogs. For this example: `u
 Click on **Activate** link and you should be able to see the repository created on Gogs.
 
 You must:
-1. Click on toggle switch( to enable the repository on Drone).
-2. After enable, click on **gear** icon that it will appear;
-3. Click on **Trusted** toggle switch (to enable drone project to access Docker shared volumes);
 
-**That is it!** Now, let's go back to repository configuration.
+1. Click on toggle switch to **enable** the repository on Drone.
+2. After enable, click on **gear** icon that it will appear;
+3. Click on **Trusted** toggle switch to enable drone project to access Docker shared volumes;
+
+**That is it!**
+
+### Repository Configuration
+Now, let's go back to repository configuration.
 Again, I'm using `sample-app-python` sample project.
 Enter on the folder and just configure the Git as any other Git repository, paying attention to use Gogs credentials.
 ```bash
@@ -222,7 +226,7 @@ git config user.email "gogs@email.com"
 Configure the remote:
 ```bash
 git remote add ci http://[GOGS_IP]:[GOGS_PORT]/gogs/sample-app-python.git
-# git remote add ci http://172.19.0.3:3000/gogs/sample-app-python.git
+# E.g. git remote add ci http://172.19.0.3:3000/gogs/sample-app-python.git
 ```
 
 So now, just add the files to commit, **push it and see the magic happens**:
@@ -232,12 +236,12 @@ git push -u ci master
 
 ### What will Drone do?
 
-1. Drone will create a docker container based on the image informed on **.drone.yml** file as you specified.
+1. Drone will create a docker container based on the image informed on **.drone.yml**.
 2. Drone will **clone** the code from Gogs to inside that container.
 3. Drone will execute the **commands** in order as they were informed on the **.drone.yml** file.
 
 #### Note
-> You should noticed that I used **ci** as the name of the remote. Named remote enable you to use multiples remotes for the same repository. So, you can use this approach on a existing project without impact, paying attention only for where you are pushing it.
+> You should noticed that I used **ci** as the name of the remote. Named remote enables you to use multiples remotes for the same repository. So, you can use this approach on a existing project without impact, paying attention only for where you are pushing it.
 
 
 ### Shared Volumes and Reporting
@@ -266,4 +270,4 @@ pipeline:
 
 Note that the coverage is generated and copied to the shared volume. So it is possible to get the coverage report on the host machine by accessing **/var/drone/reports/**. This is the reason of enabling the **Trusted** flag on Drone.
 
-For now, that is it. You just have configured a Continuous Integration enviroment running over Docker containers. I hope it was helpful. If you have any doubts, see the repository on Github and/or send me a message.
+For now, that is it. You just have configured a **Continuous Integration enviroment running over Docker containers**. I hope it was helpful. If you have any doubts, see the repository on Github and/or send me a message.
